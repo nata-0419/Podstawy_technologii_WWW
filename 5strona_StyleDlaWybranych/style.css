@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stylizacja body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 20px;
+}
+
+/* Nagłówek */
+header {
+    text-align: center;
+    background-color: #005f73;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Tabele */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.tytulTab{
+    width: 50%;
+    height: 40px;
+}
+
+table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+tr {
+    width: 50%;
+    height: 100%;
+}
+
+
+h2 {
+    text-align: center;
+    margin: 4% 0;
+    color: #005f73;
+}
+
+
+article {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Stopka */
+footer {
+    text-align: right;
+    background-color: #005f73;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.rodzina {
+    background-color: green;
+    color: white;
+}
+
+.przyjaciele {
+    background-color: blue;
+    color: white;
+}
+
+.praca {
+    background-color: gray;
+    color: black;
+}
+.dodajPrz{
+    background-color:#005f73;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.dodajPrz:hover{
+    background-color: #04AA6D;
+}
+.dodajPrz .dodajtip {
+    visibility: hidden;
+    width: 160px;
+    background-color: rgb(103, 96, 96);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+  }
+.dodajPrz:hover .dodajtip {
+    visibility: visible;
+}
+
+section{
+    width: 100%;
+    height: 250px;
+}
+
+.panda{
+    width: 230px;
+    height: 160px;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+  }
+  
+  @keyframes example {
+    0%   {left:0px; top:0px;}
+    25%  {left:150px; top:0px;}
+    50%  {left:-150x; top:200px;}
+    75%  {left:0px; top:150px;}
+    100% {left:0px; top:0px;}
+  }

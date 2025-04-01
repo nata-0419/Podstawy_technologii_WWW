@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <header>
+        <h3>Style dla wybranych</h3>
+        <p>labolatoria5</p>
+    </header>
+
+    <article>
+        <h2>Lista kontaktów</h2>
+        <br>
+        <hr>
+        <table>
+            <thead>
+                <tr>
+                    <th>Li.porządkowa</th>
+                    <th>Imie</th>
+                    <th>Nazwisko</th>
+                    <th>Email</th>
+                    <th>Wiek</th>
+                    <th>Data Urodzenia</th>
+                    <th>Pleć</th>
+                    <th>Grupa</th>
+                </tr>
+            </thead>
+            <tbody id="tabela">
+
+            </tbody>
+        </table>
+
+        <h2>Dodaj nowego kontaktu</h2>
+        <div>
+            <label for="imie">Podaj imie: </label>
+            <input type="text" id="imie">
+        </div>
+        <div>
+            <label for="nazwisko">Podaj nazwisko: </label>
+            <input type="text" id="nazwisko">
+        </div>
+        <div>
+            <label for="email">Podaj email: </label>
+            <input type="email" id="email">
+        </div>
+        <div>
+            <label for="wiek">Podaj wiek: </label>
+            <input type="number" id="wiek">
+        </div>
+        <div>
+            <label for="data">Podaj date urodzenia: </label>
+            <input type="date" id="data">
+        </div>
+        <div>
+            <label for="plec">Wybierz pleć</label>
+            <select id="plec">
+              <option value="Kobieta">Kobieta</option>
+              <option value="Mężczyzna">Mężczyzna</option>
+            </select>
+        </div>
+        <div>
+            <label for="grupa">Grupa:</label>
+            <select id="grupa">
+                <option value="Rodzina">Rodzina</option>
+                <option value="Przyjaciele">Przyjaciele</option>
+                <option value="Praca">Praca</option>
+                <option value="Znajomi">Znajomi</option>
+            </select>
+        </div>
+
+            <br>
+        
+        <div button class="dodajPrz" id="dodKontakt">Dodaj nowy kontakt do tabeli</button>
+            <span class="dodajtip">Dodaj nowy kontakt</span>
+        </div>
+        <script src="scriptH.js"></script>
+        <hr>
+
+        <section class="pole">
+            <img  class="panda" src="panda.jpg" alt="zdjęcie pandy">
+        </section>
+
+
+    </article>
+
+    <footer>
+        <p>Natalia Góras</p>
+    </footer>
+
+</body>
+</html>

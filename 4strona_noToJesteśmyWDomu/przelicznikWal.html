@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Strona glówna - Technologie</title>
+    <style>
+        .P {
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h2>No to jesteśmy w DOM -u</h2>
+        <p>labolatoria 4</p>
+    </header>
+
+    <nav>
+        <a href="filmy.html" ><h3>Filmy</h3></a>
+        <a href="technologiePro.html"><h3>Technologie Programistyczne</h3></a>
+        <a href="przelicznikWal.html" class="P"><h3>Przelicznik Walut</h3></a>
+    </nav>
+
+
+    <article>
+        <h1>Przelicznik Walut</h1>
+
+        <label for="pln">Kwota w złotówkach:</label>
+        <input type="text" id="pln" placeholder="Wpisz kwotę w PLN">
+    
+        <label for="currency">Wybierz walutę:</label>
+        <select id="currency">
+            <option value="euro">Euro (EUR)</option>
+            <option value="usd">Dolar amerykański (USD)</option>
+        </select>
+    
+        <button onclick="convertCurrency()">Przelicz</button>
+    
+        <p>Wynik: <span id="result"></span></p>
+    
+        <script src="scriptW.js"></script>
+
+
+    </article>
+
+</body>
+</html>

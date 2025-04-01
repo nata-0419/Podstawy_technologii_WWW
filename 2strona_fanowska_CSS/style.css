@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stylizacja body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 20px;
+}
+
+/* Nagłówek */
+header {
+    text-align: center;
+    background-color: #005f73;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Nawigacja */
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav h4 {
+    display: inline-block;
+    margin: 5px 10px;
+    background-color: #0a9396;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav h4 a {
+    color: white;
+    text-decoration: none;
+}
+
+nav h4:hover {
+    background-color: #94d2bd;
+}
+
+/* Tabele */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+tr {
+    width: 50%;
+    height: 300px;
+}
+
+
+/* Nagłówki sekcji */
+h3, h4 {
+    text-align: center;
+    margin: 20px 0;
+    color: #005f73;
+}
+
+/* Obrazki */
+img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.galeria{
+    width: 80%;
+    height: 80%;
+}
+
+.opinia{
+    width: 5%;
+    height: 5%;
+}
+
+.obsada{
+    width: 400px;
+    height: 250px;
+}
+
+/* Historia filmu */
+p {
+    text-align: justify;
+    margin: 10px 20px;
+}
+
+/* Stopka */
+footer {
+    text-align: right;
+    background-color: #005f73;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}

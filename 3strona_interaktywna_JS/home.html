@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Stona glówna</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Interaktywna strona</h1>
+    </header>
+
+    <nav>
+        <a href="home.html"><h3>Strona glówna</h3></a> 
+        <a href="galeria.html"><h3>Galeria</h3></a>
+        <a href="kalkulator.html"><h3>Kalkulator</h3></a>
+    </nav>
+
+    <article>
+        <h2>W tym artykule będę chciala zaprezentować interaktywną stronę</h2>
+        <p>Naszym zadaniem będzie dodanie do strony skryptów umożliwiających interakcję użytkownika z elementami tej strony bez konieczności wysyłania żądań do serwera HTTP</p>
+
+        <h4>Przejdzmy przez przyklady</h4>
+
+        <table>
+            <tr class="tytulTab">
+                <th>Wykorzystany kod</th>
+                <th>Przyklad dzialania</th>
+            </tr>
+            <tr>
+                <td>
+                    <p>Po kliknięciu podmienia się tekst</p>
+<pre>
+    &lt;p id="demo"&gt;Ta linijka tekstu się zmieni gdy klikniesz przycisk.&lt;/p&gt;
+    &lt;button type="button" onclick='document.getElementById("demo").innerHTML = "Witam na stronie testowej!"'&gt;
+        Kliknij tu!
+    &lt;/button&gt;
+</pre>
+                </td>
+                <td>
+                   <p id="demo1">Ta linijka tekstu się zmieni gdy klikniesz przycisk.</p>
+                   <button type="button" onclick='document.getElementById("demo1").innerHTML = "Witam na stronie testowej!"'>Kliknij tu!</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Po kliknięciu w przycisk tekst się pomniejszy oraz zmieni kolor</p>
+<pre>
+    &lt;p id="demo2" style="font-size: 30px; color:black"&gt;
+        Ta linijka tekstu się pomniejszy i zmieni kolor gdy klikniesz przycisk.
+    &lt;/p&gt;
+    &lt;button type="button" onclick="change()"&gt; Kliknij tu! &lt;/button&gt;
+    &lt;script&gt;
+        function change() {
+            let element = document.getElementById('demo2');
+            element.style.fontSize = '10px';
+            element.style.color = 'red'; 
+        }
+    &lt;/script&gt;
+</pre>
+                                          
+                </td>
+                <td>
+                    <p id="demo2" style="font-size: 30px; color:black">Ta linijka tekstu się pomniejszy i zmieni kolor gdy klikniesz przycisk.</p>
+                    <button type="button" onclick="change()"> Kliknij tu!</button>
+                    <script>
+                        function  change() {
+                            let element = document.getElementById('demo2');
+                            element.style.fontSize = '10px';
+                            element.style.color = 'red'; 
+                        }
+                    </script>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Po kliknięciu w przycisk tekst nam zniknie</p>
+<pre>
+    &lt;p id="demo"&gt;Ta linijka tekstu zniknie gdy klikniesz przycisk.&lt;/p&gt;
+    &lt;button type="button" onclick='document.getElementById("demo").style.display='none'&gt;
+        Kliknij tu!
+    &lt;/button&gt;
+</pre>  
+                </td>
+                <td>
+                    <p id="demo3">Ta linijka tekstu zniknie gdy klikniesz przycisk.</p>
+                    <button type="button" onclick="document.getElementById('demo3').style.display='none'"> Kliknij tu!</button>
+                </td>
+            </tr>
+        </table>
+    </article>
+
+    <footer>
+        <h5>Natalia Góras</h5>
+    </footer>
+
+</body>
+</html>

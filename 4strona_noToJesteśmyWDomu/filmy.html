@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Strona glówna - filmy</title>
+    <style>
+    .F {
+        background-color: blueviolet;
+    }
+</style>
+</head>
+
+
+<body>
+    
+    <header>
+        <h2>No to jesteśmy w DOM -u</h2>
+        <p>labolatoria 4</p>
+    </header>
+
+    <nav>
+        <a href="filmy.html" class="F"><h3>Filmy</h3></a>
+        <a href="technologiePro.html" ><h3>Technologie Programistyczne</h3></a>
+        <a href="przelicznikWal.html"><h3>Przelicznik Walut</h3></a>
+    </nav>
+
+
+    <article>
+        <h2>Lista filmów</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Lp.</th>
+                    <th>Tytul</th>
+                    <th>Reżyseria</th>
+                    <th>Rok produkcji</th>
+                </tr>
+            </thead>
+            <tbody id="tabFilm">
+                <tr>
+                    <td>1</td>
+                    <td>Avatar</td>
+                    <td>James Cameron</td>
+                    <td>2009</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Diuna</td>
+                    <td>Denisa Villeneuve'a</td>
+                    <td>2021</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Szybcy i wściekli</td>
+                    <td>Robert Cohen</td>
+                    <td>2001</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Transformers</td>
+                    <td>Michael Bay</td>
+                    <td> 2007</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <h2>Dodaj film</h2>
+        <div>
+            <label for="tytulFilm">Tytul filmu: </label>
+            <input type="text" id="tytulFilm">
+        </div>
+        <div>
+            <label for="rezyserFilm">Reżyser filmu: </label>
+            <input type="text" id="rezyserFilm">
+        </div>
+        <div>
+            <label for="rokFilm">Rok wydania: </label>
+            <input type="number" id="rokFilm">
+        </div>
+        <div>
+            <br>
+            <button id="dodFilm">Dodaj film do tabeli</button>
+        </div>
+
+        <script src="scriptF.js"></script>
+
+
+    </article>
+
+</body>
+</html>

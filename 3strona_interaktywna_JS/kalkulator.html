@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kalkulator</title>
+
+    <script>
+        function oblicz(){
+            const a = parseInt(document.getElementById("a").value);
+            const b = parseInt(document.getElementById("b").value);
+            const operator = document.getElementById("operator").value;
+            let wynik;
+
+            switch (operator) {
+                case '+':
+                    wynik = a + b;
+                    break;
+                case "-":
+                    wynik = a - b;
+                    break;
+                case "*":
+                    wynik = a * b;
+                    break;
+                case "/":
+                    wynik = a / b;
+                    break;
+            }
+            document.getElementById("wynik").innerHTML = `wynik dzialania to:  ${wynik}`;
+        }
+    </script>
+
+</head>
+<body>
+    <header>
+        <h1>Interaktywna strona</h1>
+    </header>
+
+    <nav>
+        <a href="home.html"><h3>Strona glówna</h3></a> 
+        <a href="galeria.html"><h3>Galeria</h3></a>
+        <a href="kalkulator.html"><h3>Kalkulator</h3></a>
+    </nav>
+
+    <article>
+            <input type="number" id="a" placeholder="podaj liczbe a">
+            <select id="operator">
+              <option value="+">dodawanie</option>
+              <option value="-">odejmowanie</option>
+              <option value="*">mnożenie</option>
+              <option value="/">dzielenie</option>
+            </select>
+            <input type="number" id="b" placeholder="podaj liczbe b">
+            <button onclick="oblicz()">=</button>
+            <p id="wynik"></p>
+          </form>
+
+
+    </article>
+
+    <footer>
+        <h5>Natalia Góras</h5>
+    </footer>
+
+</body>
+</html>
