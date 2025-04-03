@@ -7,20 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <p>Style dla wybranych, labolatoria5</p>
+
     <header>
-        <h3>Style dla wybranych</h3>
-        <p>labolatoria5</p>
+        <h2>Lista kontaktów</h2>
     </header>
 
     <article>
-        <h2>Lista kontaktów</h2>
+
         <br>
         <hr>
         <table>
             <thead>
                 <tr>
-                    <th>Li.porządkowa</th>
+                    <th>L.p.</th>
                     <th>Imie</th>
                     <th>Nazwisko</th>
                     <th>Email</th>
@@ -35,46 +35,46 @@
             </tbody>
         </table>
 
-        <h2>Dodaj nowego kontaktu</h2>
-        <div>
-            <label for="imie">Podaj imie: </label>
-            <input type="text" id="imie">
-        </div>
-        <div>
-            <label for="nazwisko">Podaj nazwisko: </label>
-            <input type="text" id="nazwisko">
-        </div>
-        <div>
-            <label for="email">Podaj email: </label>
-            <input type="email" id="email">
-        </div>
-        <div>
-            <label for="wiek">Podaj wiek: </label>
-            <input type="number" id="wiek">
-        </div>
-        <div>
-            <label for="data">Podaj date urodzenia: </label>
-            <input type="date" id="data">
-        </div>
-        <div>
-            <label for="plec">Wybierz pleć</label>
-            <select id="plec">
-              <option value="Kobieta">Kobieta</option>
-              <option value="Mężczyzna">Mężczyzna</option>
-            </select>
-        </div>
-        <div>
-            <label for="grupa">Grupa:</label>
-            <select id="grupa">
-                <option value="Rodzina">Rodzina</option>
-                <option value="Przyjaciele">Przyjaciele</option>
-                <option value="Praca">Praca</option>
-                <option value="Znajomi">Znajomi</option>
-            </select>
-        </div>
+        <h2>Dodaj nowy kontakt</h2>
+        <table class="wprowadz">
+            <tr>
+                <td><label for="imie">Podaj imie: </label></td>
+                <td><input type="text" id="imie"></tr></td>
+            </tr>
+            <tr>
+                <td><label for="nazwisko">Podaj nazwisko: </label></td>
+                <td><input type="text" id="nazwisko"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Podaj email: </label></td>
+                <td><input type="email" id="email"></td>
+            </tr>
+            <tr>
+                <td><label for="wiek">Podaj wiek: </label></td>
+                <td><input type="number" id="wiek"></td>
+            </tr>
+            <tr>
+                <td><label for="data">Podaj date urodzenia: </label></td>
+                <td><input type="date" id="data"></td>
+            </tr>
+            <tr>
+                <td><label for="plec">Wybierz pleć</label></td>
+                <td><select id="plec">
+                    <option value="Kobieta">Kobieta</option>
+                    <option value="Mężczyzna">Mężczyzna</option>
+                  </select></td>
+            </tr>
+            <tr>
+                <td><label for="grupa">Grupa:</label></td>
+                <td><select id="grupa">
+                    <option value="Rodzina">Rodzina</option>
+                    <option value="Przyjaciele">Przyjaciele</option>
+                    <option value="Praca">Praca</option>
+                    <option value="Znajomi">Znajomi</option>
+                </select></td>
+            </tr>
+        </table>
 
-            <br>
-        
         <div button class="dodajPrz" id="dodKontakt">Dodaj nowy kontakt do tabeli</button>
             <span class="dodajtip">Dodaj nowy kontakt</span>
         </div>
@@ -84,7 +84,7 @@
         <section class="pole">
             <img  class="panda" src="panda.jpg" alt="zdjęcie pandy">
         </section>
-
+        <hr>
 
     </article>
 
