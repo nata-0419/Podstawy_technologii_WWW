@@ -72,18 +72,22 @@ footer {
     border-radius: 10px;
     margin-top: 20px;
 }
-.rodzina {
+.Rodzina {
     background-color: green;
     color: white;
 }
-.przyjaciele {
+.Przyjaciele {
     background-color: blue;
-    color: white;
+    color: black;
 }
-.praca {
+.Praca {
     background-color: gray;
     color: black;
 }
+.aa{
+    color: #005f73;
+}
+
 .dodajPrz{
     background-color:#005f73;
     border: none;
@@ -113,6 +117,11 @@ footer {
 .dodajPrz:hover .dodajtip {
     visibility: visible;
 }
+.dodajPrz:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(6px);
+  }
 
 section{
     width: 100%;
@@ -129,6 +138,6 @@ section{
   
   @keyframes example {
     0%   {left:-300px; top:0px;}
-    25%  {left:300px; top:0px;}
-    50%  {left:0px; top:0px;}
+    40%  {left:300px; top:0px;}
+    100%  {left:0px; top:0px;}
   }
