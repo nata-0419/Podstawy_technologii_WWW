@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h2>Jaka pogoda, taka i strona <a>"czyli zwariowana"</a></h2>
+    </header>
+
+    <article>
+        <div class="przywitanie">
+            <h1 id="welcome">Witam w czasie zbliżających się świąt!</h1>
+            <hr>
+        </div>
+
+        <div class="przycisk">
+            <h3>Rozpiska dań jakie znajdują na na każdym stole Wielkanocnym</h3>
+            <button id="toggleList">Pokaż/Ukryj</button>
+            <div id="foodList">
+                <ol>
+                    <li>Żurek</li>
+                    <li>Babka wielkanocna</li>
+                    <li>Jajka faszerowane</li>
+                </ol>
+            </div>
+            <hr>
+        </div>
+
+        <h3>Co najchętniej robimy w Wielkanoc</h3>
+        <p class="do">Lubimy spędzać czas z rodziną.</p>
+        <p class="do">Lubimy spacerować wioosenną porą.</p>
+        <p class="do">Oglądamy bajki wielkanocne.</p>
+
+        <select id="colorSelect">
+            <option value="red">Czerwony</option>
+            <option value="blue">Niebieski</option>
+            <option value="green">Zielony</option>
+            <option value="yellow">Żółty</option>
+            <option value="purple">Fioletowy</option>
+        </select>
+        <button id="changeTextColor">Zmień kolor czcionki</button>
+        <button id="changeBgColor">Zmień kolor tła</button>
+        <hr>
+
+
+        <h3>Wybierz kolor wielkanocny</h3>
+        <p id="wishes" class="style1">Wesołych Świąt!</p>
+        <button id="toggleStyle">Zmień styl</button>
+        <hr>
+
+
+        <h3>Napisz życzenia Wielkanocne</h3>
+        <input type="text" id="textInput" placeholder="Wpisz tekst">
+        <p id="textOutput"></p>
+        <hr>
+
+
+        <h3>Wybierz stroik jaki będzie stal na twoim stole</h3>
+        <div id="gallery">
+            <div>
+                <img src="4.jpg" width="50" height="70">
+                <img src="2.jpg" width="50" height="70">
+                <img src="3.jpg" width="50" height="70">
+            </div>
+            
+            <img id="mainImage" src="4.jpg" class="picture">
+        </div>
+        <hr>
+
+
+        <h3>Stwórz listę czynności jaką chcesz wykonać do świąt</h3>
+        <input type="text" id="taskInput" placeholder="Dodaj zadanie">
+        <button id="addTask">Dodaj</button>
+        <ul id="taskList"></ul>
+
+    </article>
+
+    <footer>
+        <p>Natalia Góras</p>
+    </footer>
+
+</body>
+</html>
