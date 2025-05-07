@@ -65,6 +65,11 @@ input{
 
 }
 
+.style3{
+    background-color: #ff921c;
+    height: 90px;
+}
+
 .picture{
     display: flex;
     align-items: center;
