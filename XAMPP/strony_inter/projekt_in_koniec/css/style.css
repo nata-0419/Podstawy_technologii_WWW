@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6d2d2;
+    color: #333;
+    padding: 20px;
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 20vh 65vh 15vh;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "Menu"
+    "Tresc"
+    "Stopka";
+}
+
+header {
+    grid-area: Menu;
+    background-color: #005f73;
+    color: white;
+    border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+
+
+article {
+    grid-area: Tresc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+    .karta {
+        background-color: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 10px 8px 16px rgba(0,0,0,0.1);
+        max-width: 500px;
+        width: 90%;
+    }
+
+        table {
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        table td {
+            padding: 8px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button.butLog {
+            padding: 10px 20px;
+            margin: 5px 10px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button.butLog:hover {
+            background-color: #0a9396;
+        }
+
+
+nav {
+    display: flex;
+    gap: 15%;
+    margin: 20px;
+}
+
+nav h3 {
+    display: inline-block;
+    margin: 5px 10px;
+    background-color: #0a9396;
+    padding: 20px 25px;
+    border-radius: 5px;
+}
+
+nav h3 a {
+    color: white;
+    text-decoration: none;
+}
+
+nav h3:hover {
+    background-color: #94d2bd;
+}
+
+h3 {
+    text-align: center;
+    margin: 20px 0;
+    color: #005f73;
+}
+
+
+footer {
+    grid-area: Stopka;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    background-color: #005f73;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#autor{
+    color: white;
+}
+
+
+
+
+.dodajPrz{
+    background-color:#005f73;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.dodajPrz:hover{
+    background-color: #04AA6D;
+}
+.dodajPrz .dodajtip {
+    visibility: hidden;
+    width: 160px;
+    background-color: rgb(103, 96, 96);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+  }
+.dodajPrz:hover .dodajtip {
+    visibility: visible;
+}
+.dodajPrz:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(6px);
+  }
+
+
+
+
+.alert {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.alert-icon {
+    font-size: 20px;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    color: #842029;
+    border: 2px solid #f5c2c7;
+}
+
+.alert-success {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    border: 2px solid #badbcc;
+}

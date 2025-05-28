@@ -1,0 +1,243 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6d2d2;
+    margin: 20px;
+    padding: 0;
+    color: #333;
+    min-height: 90vh;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 15% 80% 10%;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "Nawigacja"
+    "Article"
+    "Stopka";
+}
+
+header {
+    grid-area: Nawigacja;
+    background-color: #005f73;
+    color: white;
+    border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+}
+
+    .wyloguj {
+        gap: 10%;
+        display: inline-block;
+        margin: 5px 10px;
+        background-color: #0a9396;
+        padding: 20px 25px;
+        border-radius: 30px;
+        color: white;
+        text-decoration: none;
+    }
+    .wyloguj:hover {
+        background-color: #94d2bd;
+    }
+    .zdjUzytkownika{
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+    .witaj{
+        margin-right: 20px;
+    }
+
+
+
+article {
+    grid-area: Article;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+nav {
+    display: flex;
+    gap: 15%;
+    margin: 20px;
+}
+nav h3 {
+    display: inline-block;
+    margin: 5px 10px;
+    background-color: #0a9396;
+    padding: 20px 25px;
+    border-radius: 5px;
+}
+nav h3 a {
+    color: white;
+    text-decoration: none;
+}
+nav h3:hover {
+    background-color: #94d2bd;
+}
+h3 {
+    text-align: center;
+    margin: 20px 0;
+    color: #005f73;
+}
+
+
+footer {
+    grid-area: Stopka;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    background-color: #005f73;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+    #autor{
+        color: white;
+    }
+
+
+
+
+
+.karta {
+    width: 600px;
+    max-width: 700px;
+    padding: 40px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+}
+
+.karta p{
+    line-height: 20px;
+}
+
+.karta h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+td {
+    padding: 10px;
+    vertical-align: top;
+}
+
+textarea, input[type="text"], input[type="date"], input[type="time"], input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+
+.przyciski {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+button.butLog {
+    padding: 10px 15px;
+    border: none;
+    background-color: #2e7d32;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.butLog:hover {
+    background-color: #1b5e20;
+}
+
+
+
+
+.formularz-aktywnosci {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+    .formularz-aktywnosci h2 {
+        margin-bottom: 20px;
+        font-size: 1.8em;
+        color: #333;
+        text-align: center;
+    }
+    .formularz-aktywnosci form {
+        display: flex;
+        flex-direction: column;
+    }
+    .formularz-aktywnosci label {
+        margin-top: 15px;
+        font-weight: bold;
+        color: #444;
+    }
+    .formularz-aktywnosci input[type="text"],
+    .formularz-aktywnosci input[type="date"],
+    .formularz-aktywnosci textarea,
+    .formularz-aktywnosci select {
+        padding: 10px;
+        font-size: 1em;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+    .formularz-aktywnosci textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+    .formularz-aktywnosci button {
+        margin-top: 20px;
+        padding: 12px;
+        background-color: #2a7ae2;
+        color: white;
+        font-size: 1em;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+    .formularz-aktywnosci button:hover {
+        background-color: #195bb3;
+    }
+    .formularz-aktywnosci p {
+        margin-top: 20px;
+        text-align: center;
+    }
+    .btn-powrot {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 20px;
+        background-color: #2a7ae2;
+        color: white;
+        text-decoration: none;
+        font-size: 1em;
+        border-radius: 6px;
+        transition: background-color 0.2s ease;
+        text-align: center;
+    }
+    .btn-powrot:hover {
+        background-color: #195bb3;
+    }

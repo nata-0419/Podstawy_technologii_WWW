@@ -1,0 +1,295 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6d2d2;
+    color: #333;
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    margin: 20px;
+    grid-template-rows: 10% 80% 10%;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "Nawigacja"
+    "Article"
+    "Stopka";
+}
+
+header {
+    grid-area: Nawigacja;
+    background-color: #005f73;
+    color: white;
+    border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+}
+
+    .wyloguj {
+        gap: 10%;
+        background-color: #e6d2d2;
+
+    }
+
+    .wyloguj {
+        display: inline-block;
+        margin: 5px 10px;
+        background-color: #0a9396;
+        padding: 20px 25px;
+        border-radius: 30px;
+    }
+
+    .wyloguj  {
+        color: white;
+        text-decoration: none;
+    }
+
+    .wyloguj:hover {
+        background-color: #94d2bd;
+    }
+
+    .zdjUzytkownika{
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+    .witaj{
+        margin-right: 20px;
+    }
+
+
+article {
+    grid-area: Article;
+    display: grid;
+    grid-template-columns: 250px 1fr; 
+    gap: 20px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.panel-boczny {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.panel-boczny h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #005f73;
+}
+
+.panel-boczny ul {
+    list-style: none;
+    padding: 0;
+}
+
+.panel-boczny li {
+    margin-bottom: 10px;
+}
+
+.panel-boczny a {
+    text-decoration: none;
+    color: #0a9396;
+    font-weight: bold;
+}
+
+.panel-boczny a:hover {
+    color: #94d2bd;
+}
+
+.szczegoly-aktywnosci {
+    overflow-y: auto;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f0e8e8;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    height: 100%;
+}
+
+
+
+
+
+nav {
+    display: flex;
+    gap: 15%;
+    margin: 20px;
+}
+
+nav h3 {
+    display: inline-block;
+    margin: 5px 10px;
+    background-color: #0a9396;
+    padding: 20px 25px;
+    border-radius: 5px;
+}
+
+nav h3 a {
+    color: white;
+    text-decoration: none;
+}
+
+nav h3:hover {
+    background-color: #94d2bd;
+}
+
+h3 {
+    text-align: center;
+    margin: 20px 0;
+    color: #005f73;
+}
+
+
+footer {
+    grid-area: Stopka;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    background-color: #005f73;
+    padding: 15px;
+    border-radius: 10px;
+}
+    #autor{
+        color: white;
+    }
+
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+    .galeria-kafelek {
+        width: 150px;
+        height: 100px;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+        display: block;
+    }
+    .galeria-kafelek img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        top: 0; left: 0;
+        width: 100%; 
+        height: 100%;
+        background-color: rgba(0,0,0,0.8);
+        justify-content: center;
+        align-items: center;
+    }
+    .modal img {
+        max-width: 300px;
+        max-height: 80%;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #000;
+    }
+    .modal:target {
+        display: flex;
+    }
+    .modal-zamknij {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 40px;
+        color: white;
+        text-decoration: none;
+    }
+    .modal-zamknij:hover {
+        color: #ccc;
+    }
+
+
+
+.zadania-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 15px;
+}
+    .zadania-tabela th, .zadania-tabela td {
+        padding: 12px 16px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    .zadania-tabela thead {
+        background-color: #0a9396;
+        color: white;
+    }
+    .zadania-tabela tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+    .zadania-tabela tr:last-child td {
+        border-bottom: none;
+    }
+
+
+    .zadanie-form {
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.zadanie-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #005f73;
+}
+
+.zadanie-form input[type="date"],
+.zadanie-form select,
+.zadanie-form textarea {
+    width: 100%;
+    padding: 7px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.zadanie-form button {
+    background-color: #0a9396;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.zadanie-form button:hover {
+    background-color: #94d2bd;
+}
+
+
+
