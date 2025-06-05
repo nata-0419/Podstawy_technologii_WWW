@@ -49,42 +49,42 @@ $stmt->close();
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-while ($cel = $result->fetch_assoc()) {
-    echo "<div class='cel-box'>";
-    echo "<div class='cel-grid'>";
+        while ($cel = $result->fetch_assoc()) {
+        echo "<div class='cel-box'>";
+        echo "<div class='cel-grid'>";
 
-    echo "<div class='cel-info'>";
-    echo "<h2>" . htmlspecialchars($cel['nazwa']) . "</h2><br>";
-    echo "<p><strong>Kategoria:</strong> " . htmlspecialchars($cel['kategoria']) . "</p>";
-    echo "<p><strong>Opis:</strong> " . htmlspecialchars($cel['opis']) . "</p>";
-    echo "<p><strong>Koszty:</strong> " . $cel['koszty'] . " zł</p>";
-    echo "<p><strong>Zebrano:</strong> " . $cel['uzbierana_kwota'] . " zł</p>";
-    echo "<p><strong>Data rozpoczęcia:</strong> " . $cel['data_rozpoczecia'] . "</p>";
-    echo "<p><strong>Data zakończenia:</strong> " . $cel['data_zakonczenia'] . "</p>";
-    echo "<p><strong>Status:</strong> " . $cel['status'] . "</p>";
-    echo "</div>";
+            echo "<div class='cel-info'>";
+            echo "<h2>" . htmlspecialchars($cel['nazwa']) . "</h2><br>";
+            echo "<p><strong>Kategoria:</strong> " . htmlspecialchars($cel['kategoria']) . "</p>";
+            echo "<p><strong>Opis:</strong> " . htmlspecialchars($cel['opis']) . "</p>";
+            echo "<p><strong>Koszty:</strong> " . $cel['koszty'] . " zł</p>";
+            echo "<p><strong>Zebrano:</strong> " . $cel['uzbierana_kwota'] . " zł</p>";
+            echo "<p><strong>Data rozpoczęcia:</strong> " . $cel['data_rozpoczecia'] . "</p>";
+            echo "<p><strong>Data zakończenia:</strong> " . $cel['data_zakonczenia'] . "</p>";
+            echo "<p><strong>Status:</strong> " . $cel['status'] . "</p>";
+            echo "</div>";
 
-    echo "<div class='cel-img'>";
-    if (!empty($cel['zdjecie'])) {
-        echo "<img src='zdjecia/cele/" . htmlspecialchars($cel['zdjecie']) . "' alt='Zdjęcie celu'>";
-    }
-    echo "</div>";
-    echo "</div>";
+            echo "<div class='cel-img'>";
+            if (!empty($cel['zdjecie'])) {
+                echo "<img src='zdjecia/cele/" . htmlspecialchars($cel['zdjecie']) . "' alt='Zdjęcie celu'>";
+            }
+            echo "</div>";
+        echo "</div>";
 
-    echo "<div class='cel-actions'>";
-        echo "<a href='edycja_celu.php?id=" . $cel['id'] . "' class='przycisk-linkowy'>Edytuj cel</a> ";
+            echo "<div class='cel-actions'>";
+                echo "<a href='edycja_celu.php?id=" . $cel['id'] . "' class='przycisk-linkowy'>Edytuj cel</a> ";
+                
+                echo "<form action='usun_cel.php' method='POST' onsubmit='return confirm(\"Na pewno chcesz usunąć ten cel?\")' style='display:inline-block; margin-left:10px;'>";
+                echo "<input type='hidden' name='id' value='" . $cel['id'] . "'>";
+                echo "<button type='submit' class='przycisk-linkowy' >Usuń cel</button>";
+                echo "</form>";
+            echo "</div>";
+            echo "</div><hr>";
 
-        echo "<form action='usun_cel.php' method='POST' onsubmit='return confirm(\"Na pewno chcesz usunąć ten cel?\")' style='display:inline-block; margin-left:10px;'>";
-        echo "<input type='hidden' name='id' value='" . $cel['id'] . "'>";
-        echo "<button type='submit' class='przycisk-linkowy' >Usuń cel</button>";
-        echo "</form>";
-    echo "</div>";
-    echo "</div><hr>";
-
-}
-    } else {
-        echo "<p>Brak zapisanych celów.</p>";
-    }
+        }
+            } else {
+                echo "<p>Brak zapisanych celów.</p>";
+            }
 
     $stmt->close();
     ?>

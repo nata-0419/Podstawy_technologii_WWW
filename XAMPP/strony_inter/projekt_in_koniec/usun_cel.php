@@ -5,7 +5,6 @@ require_once 'baza.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
     $id_celu = (int)$_POST['id'];
 
-    // 1. Usuń szczegóły celu
     $sql1 = "DELETE FROM szczegoly_celu WHERE id_celu = ?";
     $stmt1 = $conn->prepare($sql1);
     if ($stmt1) {
@@ -14,7 +13,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
         $stmt1->close();
     }
 
-    // 2. Usuń główny rekord celu
     $sql2 = "DELETE FROM cele WHERE id = ?";
     $stmt2 = $conn->prepare($sql2);
     if ($stmt2) {

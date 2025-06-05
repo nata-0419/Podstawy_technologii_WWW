@@ -21,7 +21,7 @@ function wyszukajAktywnosc() {
     const input = document.getElementById("wyszukajInput").value.toLowerCase();
     const rows = Array.from(document.querySelectorAll(".aktywnosci-tabela tbody tr"));
 
-    rows.forEach(row => row.classList.remove("highlight")); // usuń podświetlenia
+    rows.forEach(row => row.classList.remove("highlight"));
 
     const znalezione = rows.filter(row => {
         const nazwa = row.cells[1].innerText.toLowerCase();

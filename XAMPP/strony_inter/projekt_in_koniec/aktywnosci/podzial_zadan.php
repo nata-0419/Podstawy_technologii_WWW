@@ -1,10 +1,8 @@
 <?php
 
 $stmt = $conn->prepare("
-    SELECT u.nick, pz.id, pz.trescZadania, pz.status, pz.dataUkonczenia
-    FROM podzial_zad pz
-    JOIN aktywnosci_uzytkownik au ON pz.id_wsp = au.id_AktUzy
-    JOIN uzytkownik u ON au.id_uzytkownika = u.id
+    SELECT u.nick, pz.id, pz.trescZadania, pz.status, pz.dataUkonczenia FROM podzial_zad pz
+    JOIN aktywnosci_uzytkownik au ON pz.id_wsp = au.id_AktUzy JOIN uzytkownik u ON au.id_uzytkownika = u.id
     WHERE au.id_aktywnosci = ?
 ");
 

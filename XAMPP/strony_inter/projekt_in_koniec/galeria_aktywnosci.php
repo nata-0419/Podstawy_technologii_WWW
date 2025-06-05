@@ -7,7 +7,6 @@ if (!$aktywnosc_id) {
     exit;
 }
 
-// Pobieramy dane wydarzenia
 $stmt = $pdo->prepare("SELECT nazwa, termin FROM aktywnosci_grupowe WHERE id = ?");
 $stmt->execute([$aktywnosc_id]);
 $aktywnosc = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -17,7 +16,6 @@ if (!$aktywnosc) {
     exit;
 }
 
-// Pobieramy zdjęcia powiązane z aktywnością
 $stmt = $pdo->prepare("SELECT sciezka FROM galeria WHERE id_aktywnosci = ?");
 $stmt->execute([$aktywnosc_id]);
 $zdjecia = $stmt->fetchAll(PDO::FETCH_ASSOC);

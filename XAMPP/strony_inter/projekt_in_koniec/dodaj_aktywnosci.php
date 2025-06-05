@@ -9,8 +9,6 @@ if (!isset($_SESSION['nick'])) {
 
 $komunikat = '';
 $nick = $_SESSION['nick'];
-
-// Pobierz ID użytkownika
 $stmt = $conn->prepare("SELECT id FROM uzytkownik WHERE nick = ?");
 $stmt->bind_param("s", $nick);
 $stmt->execute();
@@ -19,7 +17,6 @@ $user = $result->fetch_assoc();
 $id_uzytkownika = $user['id'];
 $stmt->close();
 
-// Mapowanie statusu na ikonę
 function przypiszIkone($status) {
     switch ($status) {
         case 'nie rozpoczęto realizacji':
@@ -41,26 +38,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $statusZam = $_POST['status'];
     $ikona = przypiszIkone($statusZam);
 
-    // 1. Dodaj aktywność do tabeli aktywnosci_grupowe
     $stmt1 = $conn->prepare("INSERT INTO aktywnosci_grupowe (nazwa, opis, termin, typ) VALUES (?, ?, ?, ?)");
     $stmt1->bind_param("ssss", $nazwa, $opis, $termin, $typ);
     $stmt1->execute();
     $id_aktywnosci = $stmt1->insert_id;
     $stmt1->close();
 
-    // 2. Przypisz użytkownika do aktywności
     $stmt2 = $conn->prepare("INSERT INTO aktywnosci_uzytkownik (id_aktywnosci, id_uzytkownika) VALUES (?, ?)");
     $stmt2->bind_param("ii", $id_aktywnosci, $id_uzytkownika);
     $stmt2->execute();
     $stmt2->close();
 
-    // 3. Ustaw status i ikonę
     $stmt3 = $conn->prepare("INSERT INTO status (id_aktywnosci, statusZam, ikona) VALUES (?, ?, ?)");
     $stmt3->bind_param("iss", $id_aktywnosci, $statusZam, $ikona);
     $stmt3->execute();
     $stmt3->close();
 
-    $_SESSION['komunikat'] = "✅ Aktywność została pomyślnie dodana!";
+    $_SESSION['komunikat'] = "Aktywność została pomyślnie dodana!";
     header("Location: dodaj_aktywnosci.php");
     exit();
 }

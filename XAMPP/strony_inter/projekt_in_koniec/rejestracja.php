@@ -1,8 +1,6 @@
 <?php
-
-
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+// error_reporting(E_ALL);
+// ini_set('display_errors', 1);
 require_once 'baza.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -12,7 +10,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $haslo = $_POST['haslo'] ?? '';
     $haslo_powtorz = $_POST['haslo_powtorz'] ?? '';    
     $zdjecie = $_POST['zdjecie'] ?? '';
-
 
     if (empty($imie) || empty($nazwisko) || empty($nick) || empty($haslo) || empty($haslo_powtorz)) {
         $error = "Wszystkie pola są wymagane.";

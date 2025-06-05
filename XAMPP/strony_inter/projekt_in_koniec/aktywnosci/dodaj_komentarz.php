@@ -14,7 +14,6 @@ if (!$id_aktywnosci || !$komentarz) {
     die("Nieprawidłowe dane.");
 }
 
-// Pobierz id_AktUzy – sprawdzamy, czy użytkownik jest przypisany
 $stmt = $conn->prepare("
     SELECT id_AktUzy 
     FROM aktywnosci_uzytkownik 
@@ -34,8 +33,17 @@ if ($row = $res->fetch_assoc()) {
     $stmt->bind_param("is", $id_wsp, $komentarz);
 
     if ($stmt->execute()) {
-        // Zmień na właściwy adres powrotu do aktywności z komentarzami
-        header("Location: ../aktywnosc_szczegoly.php?id=" . $id_aktywnosci);
+        $stmt = $conn->prepare("SELECT nick FROM uzytkownik WHERE id = ?");
+        $stmt->bind_param("i", $id_uzytkownika);
+        $stmt->execute();
+        $userRes = $stmt->get_result();
+        $nick = htmlspecialchars($userRes->fetch_assoc()['nick'] ?? 'Nieznany');
+
+        echo '<div class="komentarz">';
+            echo '<strong>' . $nick . '</strong> ';
+            echo '<small>' . date('Y-m-d') . '</small>';
+            echo '<p>' . nl2br(htmlspecialchars($komentarz)) . '</p>';
+        echo '</div>';
         exit;
     } else {
         echo "Błąd przy dodawaniu komentarza: " . $stmt->error;
